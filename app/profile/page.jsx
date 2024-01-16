@@ -39,10 +39,10 @@ const MyProfile = () => {
         await fetch(
           `/api/prompt/${post._id.toString()}`,
           {
-            cache: "no-store",
+            method: "DELETE",
           },
           {
-            method: "DELETE",
+            cache: "no-store",
           }
         );
 

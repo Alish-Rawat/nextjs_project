@@ -22,17 +22,19 @@ const CreatePrompt = () => {
     try {
       const response = await fetch(
         "/api/prompt/new",
-        {
-          cache: "no-store",
-        },
 
         {
           method: "POST",
-          body: JSON.stringify({
-            prompt: post.prompt,
-            userId: session?.user.id,
-            tag: post.tag,
-          }),
+          body: JSON.stringify(
+            {
+              prompt: post.prompt,
+              userId: session?.user.id,
+              tag: post.tag,
+            },
+            {
+              cache: "no-store",
+            }
+          ),
         }
       );
       if (response.ok) {
