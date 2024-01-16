@@ -39,6 +39,9 @@ const EditPrompt = () => {
     try {
       const response = await fetch(
         `/api/prompt/${promptId}`,
+        {
+          cache: "no-store",
+        },
 
         {
           method: "PATCH",
