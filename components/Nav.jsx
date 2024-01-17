@@ -22,13 +22,13 @@ const nav = () => {
     <nav className="flex-between w-full mb-16 pt-3">
       <Link href="/" className="flex gap-2 flex-center">
         <Image
-          src="/assets/images/logo.svg"
+          src="/assets/images/Promptai.svg"
           alt="PromptopiaLogo"
-          width={30}
+          width={35}
           height={30}
           className="object-contain"
         />
-        <p className="logo_text">Promptopia</p>
+        <p className="logo_text">Prompt-AI</p>
       </Link>
 
       {/* Desktop Navigation */}
@@ -48,7 +48,7 @@ const nav = () => {
                 src={session?.user.image}
                 width={37}
                 height={37}
-                className="rounded-full"
+                className="rounded-full border border-gray-300"
                 alt="profile"
               />
             </Link>
@@ -78,7 +78,7 @@ const nav = () => {
               src={session?.user.image}
               width={37}
               height={37}
-              className="rounded-full"
+              className="rounded-full border border-gray-300 "
               alt="profile"
               onClick={() => setToggleDropdown((prev) => !prev)}
             />

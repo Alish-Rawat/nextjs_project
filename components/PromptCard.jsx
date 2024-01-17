@@ -19,7 +19,7 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
   };
 
   return (
-    <div className="prompt_card">
+    <div className="prompt_card bg-white">
       <div className="flex justify-between items-start gap-5">
         <div className="flex-1 flex justify-start items-center gap-3 cursor-pointer">
           <Image
@@ -44,13 +44,15 @@ const PromptCard = ({ post, handleTagClick, handleEdit, handleDelete }) => {
                   ? "./assets/icons/tick.svg"
                   : "./assets/icons/copy.svg"
               }
-              width={12}
-              height={12}
+              width={25}
+              height={25}
             />
           </div>
         </div>
       </div>
-      <p className="my-4 font-satoshi text-gray-700 text-sm">{post.prompt}</p>
+      <p className="my-4 font-satoshi text-gray-700 text-[16px]  sm:text-[14px]">
+        {post.prompt}
+      </p>
       <p
         className="font-inter text-sm blue_gradient cursor-pointer"
         onClick={() => handleTagClick && handleTagClick(post.tag)}
