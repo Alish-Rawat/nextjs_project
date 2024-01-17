@@ -42,16 +42,11 @@ const EditPrompt = () => {
 
         {
           method: "PATCH",
-          body: JSON.stringify(
-            {
-              prompt: post.prompt,
+          body: JSON.stringify({
+            prompt: post.prompt,
 
-              tag: post.tag,
-            },
-            {
-              cache: "no-store",
-            }
-          ),
+            tag: post.tag,
+          }),
         }
       );
       if (response.ok) {
